@@ -3,69 +3,483 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Anovuyo Bakana | Software Engineering Student</title>
+  <title>Anovuyo Bakana | Full-Stack Developer</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
 
   <!-- ===== NAVIGATION BAR ===== -->
-  <nav>
-    <h1 class="logo">Anovuyo.dev</h1>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+  <nav class="navbar">
+    <div class="nav-container">
+      <h1 class="logo">
+        <span class="logo-icon"><i class="fas fa-code"></i></span>
+        Anovuyo.dev
+      </h1>
+      <ul class="nav-menu">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
   </nav>
 
   <!-- ===== HERO SECTION ===== -->
   <header class="hero">
-    <h2>Hello, I'm <span class="highlight">Anovuyo Bakana</span></h2>
-    <p>A Software Engineering student focused on QA, Automation, Cloud & Full-Stack Development</p>
-    <a href="#projects" class="btn">View My Work</a>
+    <div class="hero-content">
+      <h1>Hi, I'm <span class="highlight">Anovuyo Bakana</span></h1>
+      <h2 class="subtitle">Full-Stack Developer | QA Automation Engineer | Cloud Enthusiast</h2>
+      <p class="hero-description">
+        Crafting scalable web applications with modern technologies. 
+        Passionate about clean code, testing, and building impactful digital solutions.
+      </p>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+      </div>
+      <div class="social-links">
+        <a href="https://github.com/bakanacareerz-byte" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/techspaceanovuyobakana/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:bakanacareerz@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+    <div class="hero-animation">
+      <div class="code-block">
+        <pre><code>&lt;Developer <span class="syntax-keyword">name</span>="Anovuyo"&gt;
+  &lt;<span class="syntax-keyword">fullStack</span>&gt;true&lt;/<span class="syntax-keyword">fullStack</span>&gt;
+  &lt;<span class="syntax-keyword">skills</span>&gt;[Frontend, Backend]&lt;/<span class="syntax-keyword">skills</span>&gt;
+&lt;/Developer&gt;</code></pre>
+      </div>
+    </div>
   </header>
 
   <!-- ===== ABOUT SECTION ===== -->
-  <section id="about" class="section">
-    <h2>About Me</h2>
-    <p>
-      I'm a Software Engineering student at WeThinkCode_ with a passion for 
-      building user-friendly applications, test automation, and cloud technologies. 
-      I enjoy learning, solving problems, and creating impactful digital solutions.
-    </p>
+  <section id="about" class="section about-section">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p>
+            I'm a Software Engineering graduate at <strong>WeThinkCode_</strong> with a passion for building 
+            robust, scalable applications. With expertise in both frontend and backend development, 
+            I create end-to-end solutions that solve real-world problems.
+          </p>
+          <p>
+            My journey spans across multiple domains:
+          </p>
+          <ul class="about-list">
+            <li><strong>Full-Stack Development:</strong> Building complete web applications from UI to database</li>
+            <li><strong>QA & Automation:</strong> Writing automated tests to ensure code quality</li>
+            <li><strong>Cloud Infrastructure:</strong> Deploying and managing applications on AWS</li>
+            <li><strong>DevOps:</strong> Containerization with Docker and orchestration concepts</li>
+          </ul>
+          <p>
+            When I'm not coding, I'm exploring new technologies, contributing to open-source projects, 
+            and continuously learning to stay ahead in this ever-evolving tech landscape.
+          </p>
+        </div>
+        <div class="about-stats">
+          <div class="stat">
+            <h3>50+</h3>
+            <p>Projects Completed</p>
+          </div>
+          <div class="stat">
+            <h3>3+</h3>
+            <p>Years Learning</p>
+          </div>
+          <div class="stat">
+            <h3>100%</h3>
+            <p>Dedication</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- ===== SKILLS SECTION ===== -->
-  <section id="skills" class="section">
-    <h2>Technical Skills</h2>
-    <div class="skills-grid">
-      <div>Java (Spring Boot)</div>
-      <div>Python</div>
-      <div>React / JavaScript</div>
-      <div>Node.js / Express</div>
-      <div>PostgreSQL / MySQL</div>
-      <div>RESTful APIs</div>
-      <div>JUnit / Selenium / Cypress</div>
-      <div>Git / GitHub / GitLab</div>
-      <div>Docker</div>
-      <div>AWS & Cloud Basics</div>
+  <section id="skills" class="section skills-section">
+    <div class="container">
+      <h2 class="section-title">Technical Skills</h2>
+      
+      <div class="skills-filter">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="frontend">Frontend</button>
+        <button class="filter-btn" data-filter="backend">Backend</button>
+        <button class="filter-btn" data-filter="database">Database</button>
+        <button class="filter-btn" data-filter="devops">DevOps</button>
+        <button class="filter-btn" data-filter="testing">Testing</button>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Frontend Skills -->
+        <div class="skill-card" data-category="frontend">
+          <div class="skill-icon"><i class="fas fa-react"></i></div>
+          <h3>React.js</h3>
+          <p>Component-based UI development, Hooks, State Management</p>
+        </div>
+        <div class="skill-card" data-category="frontend">
+          <div class="skill-icon"><i class="fab fa-js-square"></i></div>
+          <h3>JavaScript (Node.js)</h3>
+          <p>Modern JS, DOM Manipulation, Async Programming, Server-side Logic</p>
+        </div>
+        <div class="skill-card" data-category="frontend">
+          <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
+          <h3>CSS</h3>
+          <p>Responsive Design, Flexbox, Grid, Animations, Styling</p>
+        </div>
+        <div class="skill-card" data-category="frontend">
+          <div class="skill-icon"><i class="fas fa-mobile-alt"></i></div>
+          <h3>HTML5</h3>
+          <p>Semantic HTML, Accessibility, SEO Optimization</p>
+        </div>
+
+        <!-- Backend Skills -->
+        <div class="skill-card" data-category="backend">
+          <div class="skill-icon"><i class="fab fa-java"></i></div>
+          <h3>Java & Spring Boot</h3>
+          <p>RESTful APIs, MVC Architecture, Dependency Injection</p>
+        </div>
+        <div class="skill-card" data-category="backend">
+          <div class="skill-icon"><i class="fab fa-python"></i></div>
+          <h3>Python</h3>
+          <p>Automation Scripts, Data Processing, Backend Logic</p>
+        </div>
+        <div class="skill-card" data-category="backend">
+          <div class="skill-icon"><i class="fas fa-hashtag"></i></div>
+          <h3>C#</h3>
+          <p>.NET Development, Object-Oriented Programming, Application Development</p>
+        </div>
+        <div class="skill-card" data-category="backend">
+          <div class="skill-icon"><i class="fas fa-network-wired"></i></div>
+          <h3>RESTful API Development</h3>
+          <p>API Design, HTTP Methods, Authentication, Versioning, Integration</p>
+        </div>
+        <div class="skill-card" data-category="backend">
+          <div class="skill-icon"><i class="fas fa-cogs"></i></div>
+          <h3>Systems Integration</h3>
+          <p>System Architecture, Service Integration, Data Flow, API Orchestration</p>
+        </div>
+
+        <!-- Database Skills -->
+        <div class="skill-card" data-category="database">
+          <div class="skill-icon"><i class="fas fa-database"></i></div>
+          <h3>PostgreSQL</h3>
+          <p>Relational Databases, Queries, Optimization, Advanced SQL</p>
+        </div>
+        <div class="skill-card" data-category="database">
+          <div class="skill-icon"><i class="fas fa-database"></i></div>
+          <h3>MySQL</h3>
+          <p>Data Modeling, Normalization, Indexing, Performance Tuning</p>
+        </div>
+        <div class="skill-card" data-category="database">
+          <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
+          <h3>Database Optimization</h3>
+          <p>Query Optimization, Indexing Strategies, Performance Monitoring, Data Architecture</p>
+        </div>
+
+        <!-- DevOps Skills -->
+        <div class="skill-card" data-category="devops">
+          <div class="skill-icon"><i class="fab fa-docker"></i></div>
+          <h3>Docker</h3>
+          <p>Containerization, Dockerfile, Container Orchestration, Microservices</p>
+        </div>
+        <div class="skill-card" data-category="devops">
+          <div class="skill-icon"><i class="fas fa-code-branch"></i></div>
+          <h3>Git (GitHub/GitLab)</h3>
+          <p>Version Control, Branching, Pull Requests, Git Workflows, Collaboration</p>
+        </div>
+        <div class="skill-card" data-category="devops">
+          <div class="skill-icon"><i class="fas fa-terminal"></i></div>
+          <h3>Linux & Shell Scripting</h3>
+          <p>System Administration, Bash Scripting, Automation, Server Management</p>
+        </div>
+        <div class="skill-card" data-category="devops">
+          <div class="skill-icon"><i class="fas fa-cogs"></i></div>
+          <h3>CI/CD Pipelines (GitLab)</h3>
+          <p>Continuous Integration, Automated Testing, Deployment Pipelines, DevOps</p>
+        </div>
+        <div class="skill-card" data-category="devops">
+          <div class="skill-icon"><i class="fas fa-tasks"></i></div>
+          <h3>Agile Development</h3>
+          <p>Scrum, Kanban, Sprint Planning, Team Collaboration, Iterative Development</p>
+        </div>
+
+        <!-- Testing Skills -->
+        <div class="skill-card" data-category="testing">
+          <div class="skill-icon"><i class="fas fa-flask-vial"></i></div>
+          <h3>Unit Testing (JUnit)</h3>
+          <p>JUnit, Test Coverage, TDD, Automated Unit Tests, Code Quality</p>
+        </div>
+        <div class="skill-card" data-category="testing">
+          <div class="skill-icon"><i class="fas fa-check-circle"></i></div>
+          <h3>Test Automation</h3>
+          <p>Selenium, Cypress, Automated Testing Frameworks, E2E Testing</p>
+        </div>
+        <div class="skill-card" data-category="testing">
+          <div class="skill-icon"><i class="fas fa-bug"></i></div>
+          <h3>QA & Debugging</h3>
+          <p>Bug Reporting, Performance Testing, Quality Assurance, Debugging</p>
+        </div>
+        <div class="skill-card" data-category="testing">
+          <div class="skill-icon"><i class="fas fa-paper-plane"></i></div>
+          <h3>Postman</h3>
+          <p>API Testing, Request Automation, Documentation, API Validation</p>
+        </div>
+        <div class="skill-card" data-category="testing">
+          <div class="skill-icon"><i class="fas fa-search"></i></div>
+          <h3>Code Quality Tools</h3>
+          <p>Static Analysis, Code Review, Linting, Security Scanning, Best Practices</p>
+        </div>
+
+        <!-- Additional Skills -->
+        <div class="skill-card" data-category="frontend">
+          <div class="skill-icon"><i class="fas fa-brain"></i></div>
+          <h3>Generative AI & Prompt Engineering</h3>
+          <p>AI Integration, Prompt Design, Machine Learning Concepts, AI Tool Development</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- ===== PROJECTS SECTION ===== -->
-  <section id="projects" class="section">
-    <h2>Projects</h2>
-    <p>Coming soon as I build more work!</p>
+  <section id="projects" class="section projects-section">
+    <div class="container">
+      <h2 class="section-title">Featured Projects</h2>
+      
+      <div class="projects-grid">
+        <!-- Project 1: Bug Tracker -->
+        <div class="project-card">
+          <div class="project-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+            <div class="project-overlay">
+              <a href="https://github.com/bakanacareerz-byte/Bug-Tracker-.git" target="_blank" class="project-link" title="Source Code"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>Bug Tracker</h3>
+            <p>
+              A lightweight bug tracker with a minimal Express API and a vanilla JS frontend.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">PostgreSQL</span>
+              <span class="tech-tag">Stripe API</span>
+            </div>
+            <div class="project-stats">
+              <span><i class="fas fa-star"></i> Featured</span>
+              <span><i class="fas fa-code"></i> 2000+ Lines</span>
+            </div>
+          </div>
+        </div>
+
+      
+        <!-- Project 3: Task Management System -->
+        <div class="project-card">
+          <div class="project-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+            <div class="project-overlay">
+              <a href="https://github.com/bakanacareerz-byte/Task-Manager-Web-App.git" target="_blank" class="project-link" title="Source Code"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>Task Management System</h3>
+            <p>
+              Collaborative task management app with user authentication, real-time updates, 
+              and automated testing suite for QA.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">Java Spring</span>
+              <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">Cypress Testing</span>
+            </div>
+            <div class="project-stats">
+              <span><i class="fas fa-check"></i> 50+ Tests</span>
+              <span><i class="fas fa-code"></i> Full Stack</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Job Tracker -->
+        <div class="project-card">
+          <div class="project-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+            <div class="project-overlay">
+              <a href="git@github.com:bakanacareerz-byte/job-tracker.git" target="_blank" class="project-link" title="Source Code"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>Job Tracker</h3>
+            <p>
+              Job application status tracking tool
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">Java Spring</span>
+              <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">Cypress Testing</span>
+            </div>
+            <div class="project-stats">
+              <span><i class="fas fa-check"></i> 50+ Tests</span>
+              <span><i class="fas fa-code"></i> Full Stack</span>
+            </div>
+          </div>
+        </div>
+
+
+      <div class="view-all">
+        <a href="https://github.com/bakanacareerz-byte" target="_blank" class="btn btn-primary">
+          View All Projects on GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE SECTION ===== -->
+  <section id="experience" class="section experience-section">
+    <div class="container">
+      <h2 class="section-title">Experience & Journey</h2>
+      
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-date">2024 - Present</div>
+          <div class="timeline-content">
+            <h3>Software Engineering Student</h3>
+            <p class="timeline-company">WeThinkCode_</p>
+            <p>
+              Intensive coding bootcamp focusing on full-stack development, software architecture, 
+              and professional development practices.
+            </p>
+            <div class="timeline-tags">
+              <span>Full-Stack Dev</span>
+              <span>Algorithms</span>
+              <span>System Design</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">2023 - 2024</div>
+          <div class="timeline-content">
+            <h3>QA Automation Specialist</h3>
+            <p class="timeline-company">Self-Directed Projects</p>
+            <p>
+              Developed automated testing frameworks and created comprehensive test suites 
+              for multiple web applications.
+            </p>
+            <div class="timeline-tags">
+              <span>Selenium</span>
+              <span>Test Automation</span>
+              <span>QA</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">2022 - 2023</div>
+          <div class="timeline-content">
+            <h3>Web Development Journey Begins</h3>
+            <p class="timeline-company">Online Learning</p>
+            <p>
+              Started learning web development fundamentals through courses and projects, 
+              building foundational skills in HTML, CSS, and JavaScript.
+            </p>
+            <div class="timeline-tags">
+              <span>HTML/CSS</span>
+              <span>JavaScript</span>
+              <span>Responsive Design</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== API DEMO SECTION ===== -->
+  <section id="api-demo" class="section api-demo-section">
+    <div class="container">
+      <h2 class="section-title">API Integration Demo</h2>
+      <p class="section-subtitle">Live example showcasing backend integration and data fetching</p>
+      
+      <div class="api-demo-container">
+        <div class="demo-input">
+          <input 
+            type="text" 
+            id="userInput" 
+            placeholder="Enter a GitHub username..."
+            class="api-input"
+          >
+          <button onclick="fetchGitHubUser()" class="btn btn-primary">Search</button>
+        </div>
+        
+        <div id="apiResult" class="api-result">
+          <p>Enter a GitHub username to see API integration in action</p>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- ===== CONTACT SECTION ===== -->
-  <section id="contact" class="section">
-    <h2>Contact</h2>
-    <p>Email: <strong>bakanacareerz@gmail.com</strong></p>
-    <p>GitHub: <strong>https://github.com/bakanacareerz-byte</strong></p>
-    <p>LinkedIn: <strong>https://www.linkedin.com/in/techspaceanovuyobakana/</strong></p>
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <h2 class="section-title">Let's Connect</h2>
+      <p class="section-subtitle">Open to opportunities, collaborations, and discussions</p>
+      
+      <div class="contact-content">
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h3>Email</h3>
+              <a href="mailto:bakanacareerz@gmail.com">bakanacareerz@gmail.com</a>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <i class="fab fa-github"></i>
+            <div>
+              <h3>GitHub</h3>
+              <a href="https://github.com/bakanacareerz-byte" target="_blank">github.com/bakanacareerz-byte</a>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <i class="fab fa-linkedin"></i>
+            <div>
+              <h3>LinkedIn</h3>
+              <a href="https://www.linkedin.com/in/techspaceanovuyobakana/" target="_blank">LinkedIn Profile</a>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <input type="text" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+      </div>
+    </div>
   </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Anovuyo Bakana. All rights reserved.</p>
+      <p>Crafted with <i class="fas fa-heart"></i> by Anovuyo | Full-Stack Developer</p>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
